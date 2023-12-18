@@ -9,13 +9,23 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Body & Container */
+/* Body & Section */
 body {
   min-width: 375px;
   font-family: sans-serif;
   line-height: 1.75;
 }
 
+.section-heading {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.section-para {
+  margin: 1.25em 0;
+}
+
+/* Container */
 .container {
   width: 90%;
   max-width: 1440px;
@@ -34,8 +44,7 @@ body {
 }
 
 .introduction-heading {
-  font-size: 2.5rem;
-  text-transform: capitalize;
+  font-size: 3.25rem;
 }
 
 .introduction-para {
@@ -55,4 +64,45 @@ body {
 .btn:hover {
   color: #000;
   background-color: #fff;
+}
+
+/* About */
+.about {
+  padding: 5em 0 2.5em 0;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
+}
+
+.about-heading::before {
+  content: "How it all started";
+  display: block;
+  font-size: 1rem;
+  position: relative;
+  bottom: -0.5em;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+@media (min-width: 925px) {
+  .about-container {
+    flex-direction: row;
+  }
+
+  .about-content {
+    flex: 2;
+  }
+
+  .about-image {
+    flex: 1;
+  }
 }
